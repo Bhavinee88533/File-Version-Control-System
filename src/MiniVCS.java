@@ -4,26 +4,7 @@ import java.security.MessageDigest;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-/**
- * MiniVCS — a tiny, single-file, console version control system (like a mini Git).
- *
- * Features:
- *  - init: create repo in .minivcs
- *  - add <file|dir|.>: track files
- *  - commit -m "message": snapshot tracked files into a new version
- *  - log: list version history (current branch)
- *  - branches: list branches
- *  - branch <name>: create a new branch at current HEAD
- *  - checkout <branch>: switch to branch and restore its HEAD files
- *  - rollback <commitHash>: move HEAD to a previous commit and restore files
- *  - status: show tracked files & simple change hints
- *
- * Implementation highlights:
- *  - File I/O & Java serialization to persist repository state in .minivcs/repo.ser
- *  - SHA-256 hashing for object content addressing (.minivcs/objects/<hash>)
- *  - Collections (Maps) for branches -> head commit, file -> blob hash, etc.
- *  - Minimal, human-friendly CLI; no external libs.
- */
+
 public class MiniVCS {
     // ---------- Public entry ----------
     public static void main(String[] args) {
